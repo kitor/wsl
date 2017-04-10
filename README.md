@@ -36,12 +36,12 @@ Currently listed here:
   * x11-xserver-utils
   * xdotool
   * pulseaudio from [PPA](https://launchpad.net/~aseering/+archive/ubuntu/wsl-pulseaudio)
+      * Note: if you're not runing Ubuntu Trusty, you need to update /etc/apt/sources.conf.d/aseeering(...).list to trusty.
 * Enabled incoming TCP port 22 in Windows Firewall  
 * Configured DBUS for [TCP connections](https://www.reddit.com/r/Windows10/comments/4rsmzp/bash_on_windows_getting_dbus_and_x_server_working/)
 * Installed X-Server for Windows 
   * [Xming](https://sourceforge.net/projects/xming/) or [Vcxsrv](https://sourceforge.net/projects/vcxsrv/)
   * Vcxsrv preferred as it's much newer (last free Xming is from 2007!)
-    * Note: if you're not runing Ubuntu Trusty, you need to update /etc/apt/sources.conf.d/aseeering(...).list to trusty.
   * Add X server to Windows Autorun
 * Installed [AutoHotkey](https://autohotkey.com/)
 
