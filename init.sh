@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#check if script is not running already
+# check if script is not running already
 pidfile=/var/run/wsl_init
 if [ -f "$pidfile" ] && kill -0 `cat $pidfile` 2>/dev/null; then
     echo "WSL init is already running, aborting!"
@@ -8,9 +8,19 @@ if [ -f "$pidfile" ] && kill -0 `cat $pidfile` 2>/dev/null; then
 fi
 echo $$ > $pidfile
 
+
+# run services
 service ssh start
 service sendmail start
 service cron start
+service dbus start
+
+# add permission to write for all to /run
+# /var/run is symlink to /run
+# without this eg. screen will not work as non-root user
+chmod go+w /run
+
+# loop to keep tilda running
 while [ true ]; do
     if DISPLAY=:0 xset q &>/dev/null; then
         rm -r /home/kitor/.cache/tilda/locks/*
