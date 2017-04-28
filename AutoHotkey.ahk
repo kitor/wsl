@@ -1,9 +1,10 @@
 #InstallKeybdHook
 Run, bash -c "/opt/wsl/init.sh", %userprofile% , Hide
 
-Process, Exist, pulseaudio.exe
-If (ErrorLevel = 0) 
+Process, Exist, "pulseaudio.exe"
+If (ErrorLevel= 0) 
 	{
+	FileRemoveDir, %userprofile%\.config\pulse, 1
 	Run, bin\pulseaudio.exe, C:\soft\pulse6 , Hide
 	}
 

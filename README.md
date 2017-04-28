@@ -32,11 +32,15 @@ Currently listed here:
   * SSH server proxy
 * Installed following packages in WSL
   * tilda
+      * Configure tilda to use ctrl+grave as "Pull down terminal"
+      * Set "when last terminal is closed" to "Open a new terminal and hide"
   * openssh-server
   * x11-xserver-utils
   * xdotool
   * pulseaudio from [PPA](https://launchpad.net/~aseering/+archive/ubuntu/wsl-pulseaudio)
       * Note: if you're not runing Ubuntu Trusty, you need to update /etc/apt/sources.conf.d/aseeering(...).list to trusty.
+      * You need to add this line at the end of /etc/pulse/default.pa:
+      * echo load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1
 * Enabled incoming TCP port 22 in Windows Firewall  
 * Configured DBUS for [TCP connections](https://www.reddit.com/r/Windows10/comments/4rsmzp/bash_on_windows_getting_dbus_and_x_server_working/)
 * Installed X-Server for Windows 
