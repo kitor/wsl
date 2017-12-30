@@ -27,7 +27,7 @@ Currently listed here:
 
 ## Prerequisites
 * WSL installed and configured without auto-login to "normal" user (running bash.exe will open root prompt)
-* Disabled Windows built-in SSH server (yes, Win10 has one, it's enabled in developer mode!)
+* Disabled Windows built-in SSH server (if Developer Mode and Device Portal are enabled - Win10 has builtIn one!)
   * SSH server broker
   * SSH server proxy
 * Installed following packages in WSL
@@ -49,6 +49,5 @@ Currently listed here:
 * Installed [AutoHotkey](https://autohotkey.com/)
 
 
-10.04.17: Verified to work on Creators Update.
-
+10.04.17: Verified to work on Creators Update.  
 30.12.17: Verified to work with Windows Store version of Ubuntu on Fall Creators Update.
