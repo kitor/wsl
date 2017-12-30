@@ -49,4 +49,5 @@ Currently listed here:
 * Installed [AutoHotkey](https://autohotkey.com/)
 
 
-Guide was just verified on clean install of Windows 10 with Creators Update.
+10.04.17: Verified to work on Creators Update.
+30.12.17: Verified to work with Windows Store version of Ubuntu on Fall Creators Update.
