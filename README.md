@@ -48,6 +48,11 @@ Currently listed here:
   * Add X server to Windows Autorun
 * Installed [AutoHotkey](https://autohotkey.com/)
 
+## Notes on PulseAudio
+PA is preconfigured to run from c:\soft. I disabled recording in configuration, due to how Windows handles input devices (when there's nothing connected to any input jack, PA freaks out as it cannot find any device). 
+If you want to use PulseAudio standalone, without AHK script, you need to take care of one thing yourself. AHK script is removing %userprofile%\.config\pulse on Windows side, before staring PA server. This is due to werid issues, somehow PA with it's own-saved config won't launch properly.
 
+## Changelog
 10.04.17: Verified to work on Creators Update.  
 30.12.17: Verified to work with Windows Store version of Ubuntu on Fall Creators Update.
+22.03.18: Added info about running PulseAudio standalone.
